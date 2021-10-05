@@ -9,12 +9,22 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    var appState: AppState!
+    weak var browserWindow: BrowserWindow?
     
-
-
+    func showBrowserWindow() {
+        if let window = browserWindow {
+            window.makeKeyAndOrderFront(self)
+            return
+        }
+        
+        browserWindow = BrowserWindow.make(appState: appState)
+        browserWindow?.makeKeyAndOrderFront(self)
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        appState = AppState(httpService: HTTPService())
+        showBrowserWindow()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

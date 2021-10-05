@@ -8,18 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		A9EF1C46270A4BFB009EF6D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C45270A4BFB009EF6D8 /* AppDelegate.swift */; };
-		A9EF1C48270A4BFB009EF6D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C47270A4BFB009EF6D8 /* ViewController.swift */; };
+		A9EF1C48270A4BFB009EF6D8 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C47270A4BFB009EF6D8 /* BrowserViewController.swift */; };
 		A9EF1C4A270A4BFD009EF6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1C49270A4BFD009EF6D8 /* Assets.xcassets */; };
 		A9EF1C4D270A4BFD009EF6D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1C4B270A4BFD009EF6D8 /* Main.storyboard */; };
+		A9EF1C56270A4DAE009EF6D8 /* NSObject+configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C55270A4DAE009EF6D8 /* NSObject+configurable.swift */; };
+		A9EF1C58270A4E04009EF6D8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C57270A4E04009EF6D8 /* BaseViewController.swift */; };
+		A9EF1C5B270A5A74009EF6D8 /* Squad.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C5A270A5A74009EF6D8 /* Squad.swift */; };
+		A9EF1C5D270A5B54009EF6D8 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C5C270A5B54009EF6D8 /* Inspectable.swift */; };
+		A9EF1C60270A5C24009EF6D8 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C5F270A5C24009EF6D8 /* HTTPService.swift */; };
+		A9EF1C62270A6D19009EF6D8 /* HTTPResponseParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C61270A6D19009EF6D8 /* HTTPResponseParseOperation.swift */; };
+		A9EF1C64270A6E26009EF6D8 /* HTTPRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C63270A6E26009EF6D8 /* HTTPRequestOperation.swift */; };
+		A9EF1C66270B187E009EF6D8 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C65270B187E009EF6D8 /* AsyncOperation.swift */; };
+		A9EF1C68270B2560009EF6D8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C67270B2560009EF6D8 /* AppState.swift */; };
+		A9EF1C71270B2B4D009EF6D8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C70270B2B4D009EF6D8 /* HistoryViewController.swift */; };
+		A9EF1C73270B2B87009EF6D8 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C72270B2B87009EF6D8 /* ResponseViewController.swift */; };
+		A9EF1C75270B2C25009EF6D8 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C74270B2C25009EF6D8 /* RequestViewController.swift */; };
+		A9EF1C77270B2E3B009EF6D8 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C76270B2E3B009EF6D8 /* RequestViewModel.swift */; };
+		A9EF1C79270B2FF3009EF6D8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C78270B2FF3009EF6D8 /* ContentViewController.swift */; };
+		A9EF1C7B270B348F009EF6D8 /* HistoryOutlineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C7A270B348F009EF6D8 /* HistoryOutlineDataSource.swift */; };
+		A9EF1C7D270B36F2009EF6D8 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C7C270B36F2009EF6D8 /* BrowserWindow.swift */; };
+		A9EF1C80270B439E009EF6D8 /* RequestStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C7F270B439E009EF6D8 /* RequestStateView.swift */; };
+		A9EF1C82270B43AF009EF6D8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C81270B43AF009EF6D8 /* BaseView.swift */; };
+		A9EF1C84270B4CFC009EF6D8 /* InspectableOutlineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C83270B4CFC009EF6D8 /* InspectableOutlineDataSource.swift */; };
+		A9EF1C86270B5252009EF6D8 /* InspectableTextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C85270B5252009EF6D8 /* InspectableTextCellView.swift */; };
+		A9EF1C8C270B5EC2009EF6D8 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C8B270B5EC2009EF6D8 /* HistoryCellView.swift */; };
+		A9EF1C95270C5384009EF6D8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C94270C5384009EF6D8 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A9EF1C42270A4BFB009EF6D8 /* Squaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9EF1C45270A4BFB009EF6D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9EF1C47270A4BFB009EF6D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9EF1C47270A4BFB009EF6D8 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		A9EF1C49270A4BFD009EF6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9EF1C4C270A4BFD009EF6D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9EF1C4E270A4BFD009EF6D8 /* Squaders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Squaders.entitlements; sourceTree = "<group>"; };
+		A9EF1C55270A4DAE009EF6D8 /* NSObject+configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+configurable.swift"; sourceTree = "<group>"; };
+		A9EF1C57270A4E04009EF6D8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A9EF1C5A270A5A74009EF6D8 /* Squad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad.swift; sourceTree = "<group>"; };
+		A9EF1C5C270A5B54009EF6D8 /* Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
+		A9EF1C5F270A5C24009EF6D8 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		A9EF1C61270A6D19009EF6D8 /* HTTPResponseParseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseParseOperation.swift; sourceTree = "<group>"; };
+		A9EF1C63270A6E26009EF6D8 /* HTTPRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestOperation.swift; sourceTree = "<group>"; };
+		A9EF1C65270B187E009EF6D8 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		A9EF1C67270B2560009EF6D8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A9EF1C70270B2B4D009EF6D8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		A9EF1C72270B2B87009EF6D8 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
+		A9EF1C74270B2C25009EF6D8 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		A9EF1C76270B2E3B009EF6D8 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
+		A9EF1C78270B2FF3009EF6D8 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		A9EF1C7A270B348F009EF6D8 /* HistoryOutlineDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOutlineDataSource.swift; sourceTree = "<group>"; };
+		A9EF1C7C270B36F2009EF6D8 /* BrowserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindow.swift; sourceTree = "<group>"; };
+		A9EF1C7F270B439E009EF6D8 /* RequestStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStateView.swift; sourceTree = "<group>"; };
+		A9EF1C81270B43AF009EF6D8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A9EF1C83270B4CFC009EF6D8 /* InspectableOutlineDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectableOutlineDataSource.swift; sourceTree = "<group>"; };
+		A9EF1C85270B5252009EF6D8 /* InspectableTextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectableTextCellView.swift; sourceTree = "<group>"; };
+		A9EF1C8B270B5EC2009EF6D8 /* HistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		A9EF1C94270C5384009EF6D8 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +96,83 @@
 		A9EF1C44270A4BFB009EF6D8 /* Squaders */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF1C5E270A5C19009EF6D8 /* Services */,
+				A9EF1C59270A5A46009EF6D8 /* Models */,
+				A9EF1C54270A4D9E009EF6D8 /* Helpers */,
+				A9EF1C6F270B2B40009EF6D8 /* Features */,
 				A9EF1C45270A4BFB009EF6D8 /* AppDelegate.swift */,
-				A9EF1C47270A4BFB009EF6D8 /* ViewController.swift */,
 				A9EF1C49270A4BFD009EF6D8 /* Assets.xcassets */,
 				A9EF1C4B270A4BFD009EF6D8 /* Main.storyboard */,
 				A9EF1C4E270A4BFD009EF6D8 /* Squaders.entitlements */,
 			);
 			path = Squaders;
+			sourceTree = "<group>";
+		};
+		A9EF1C54270A4D9E009EF6D8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF1C55270A4DAE009EF6D8 /* NSObject+configurable.swift */,
+				A9EF1C57270A4E04009EF6D8 /* BaseViewController.swift */,
+				A9EF1C65270B187E009EF6D8 /* AsyncOperation.swift */,
+				A9EF1C81270B43AF009EF6D8 /* BaseView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A9EF1C59270A5A46009EF6D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF1C5A270A5A74009EF6D8 /* Squad.swift */,
+				A9EF1C5C270A5B54009EF6D8 /* Inspectable.swift */,
+				A9EF1C67270B2560009EF6D8 /* AppState.swift */,
+				A9EF1C94270C5384009EF6D8 /* Request.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A9EF1C5E270A5C19009EF6D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF1C5F270A5C24009EF6D8 /* HTTPService.swift */,
+				A9EF1C63270A6E26009EF6D8 /* HTTPRequestOperation.swift */,
+				A9EF1C61270A6D19009EF6D8 /* HTTPResponseParseOperation.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A9EF1C6F270B2B40009EF6D8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF1C8D270B60C0009EF6D8 /* History */,
+				A9EF1C7E270B4385009EF6D8 /* Request */,
+				A9EF1C47270A4BFB009EF6D8 /* BrowserViewController.swift */,
+				A9EF1C78270B2FF3009EF6D8 /* ContentViewController.swift */,
+				A9EF1C7C270B36F2009EF6D8 /* BrowserWindow.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A9EF1C7E270B4385009EF6D8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF1C72270B2B87009EF6D8 /* ResponseViewController.swift */,
+				A9EF1C74270B2C25009EF6D8 /* RequestViewController.swift */,
+				A9EF1C76270B2E3B009EF6D8 /* RequestViewModel.swift */,
+				A9EF1C7F270B439E009EF6D8 /* RequestStateView.swift */,
+				A9EF1C83270B4CFC009EF6D8 /* InspectableOutlineDataSource.swift */,
+				A9EF1C85270B5252009EF6D8 /* InspectableTextCellView.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		A9EF1C8D270B60C0009EF6D8 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF1C70270B2B4D009EF6D8 /* HistoryViewController.swift */,
+				A9EF1C7A270B348F009EF6D8 /* HistoryOutlineDataSource.swift */,
+				A9EF1C8B270B5EC2009EF6D8 /* HistoryCellView.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +245,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EF1C48270A4BFB009EF6D8 /* ViewController.swift in Sources */,
+				A9EF1C5D270A5B54009EF6D8 /* Inspectable.swift in Sources */,
+				A9EF1C7D270B36F2009EF6D8 /* BrowserWindow.swift in Sources */,
+				A9EF1C48270A4BFB009EF6D8 /* BrowserViewController.swift in Sources */,
+				A9EF1C86270B5252009EF6D8 /* InspectableTextCellView.swift in Sources */,
+				A9EF1C79270B2FF3009EF6D8 /* ContentViewController.swift in Sources */,
+				A9EF1C8C270B5EC2009EF6D8 /* HistoryCellView.swift in Sources */,
+				A9EF1C75270B2C25009EF6D8 /* RequestViewController.swift in Sources */,
+				A9EF1C64270A6E26009EF6D8 /* HTTPRequestOperation.swift in Sources */,
+				A9EF1C58270A4E04009EF6D8 /* BaseViewController.swift in Sources */,
+				A9EF1C56270A4DAE009EF6D8 /* NSObject+configurable.swift in Sources */,
+				A9EF1C77270B2E3B009EF6D8 /* RequestViewModel.swift in Sources */,
+				A9EF1C71270B2B4D009EF6D8 /* HistoryViewController.swift in Sources */,
+				A9EF1C95270C5384009EF6D8 /* Request.swift in Sources */,
+				A9EF1C80270B439E009EF6D8 /* RequestStateView.swift in Sources */,
+				A9EF1C62270A6D19009EF6D8 /* HTTPResponseParseOperation.swift in Sources */,
+				A9EF1C68270B2560009EF6D8 /* AppState.swift in Sources */,
+				A9EF1C60270A5C24009EF6D8 /* HTTPService.swift in Sources */,
 				A9EF1C46270A4BFB009EF6D8 /* AppDelegate.swift in Sources */,
+				A9EF1C7B270B348F009EF6D8 /* HistoryOutlineDataSource.swift in Sources */,
+				A9EF1C66270B187E009EF6D8 /* AsyncOperation.swift in Sources */,
+				A9EF1C84270B4CFC009EF6D8 /* InspectableOutlineDataSource.swift in Sources */,
+				A9EF1C82270B43AF009EF6D8 /* BaseView.swift in Sources */,
+				A9EF1C5B270A5A74009EF6D8 /* Squad.swift in Sources */,
+				A9EF1C73270B2B87009EF6D8 /* ResponseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
