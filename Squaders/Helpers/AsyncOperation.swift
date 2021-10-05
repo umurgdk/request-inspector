@@ -17,15 +17,18 @@ class AsyncOperation<Output, Failure: Error>: Operation {
         case finished = "isFinished"
     }
     
-    private var state = State.ready {
-        willSet {
+    private let lockQueue = DispatchQueue(label: "io.umurgdk.squaders.AsyncOperation", attributes: .concurrent)
+    private var _state: State = .ready
+    private var state: State {
+        get { lockQueue.sync { return _state } }
+        set {
+            let oldValue = lockQueue.sync { return _state }
+            
+            willChangeValue(forKey: oldValue.rawValue)
             willChangeValue(forKey: newValue.rawValue)
-            willChangeValue(forKey: state.rawValue)
-        }
-        
-        didSet {
+            lockQueue.sync { _state = newValue }
             didChangeValue(forKey: oldValue.rawValue)
-            didChangeValue(forKey: state.rawValue)
+            didChangeValue(forKey: newValue.rawValue)
         }
     }
     
