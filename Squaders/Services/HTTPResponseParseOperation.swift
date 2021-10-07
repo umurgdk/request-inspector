@@ -7,6 +7,10 @@
 
 import Foundation
 
+fileprivate struct HTTPResponseBody: Decodable {
+    let json: Squad
+}
+
 class HTTPResponseParseOperation: Operation {
     typealias Service = HTTPService
     typealias Result = Swift.Result<Request.Response, Request.Failure>
@@ -23,17 +27,9 @@ class HTTPResponseParseOperation: Operation {
     
     override func main() {
         do {
-            let object = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            guard
-                let object = object,
-                let responseString = object["data"] as? String,
-                let responseData = responseString.data(using: .utf8)
-            else {
-                parseCompletionBlock(.failure(.unexpectedResponse(httpResponse, nil)))
-                return
-            }
+            let responseBody = try JSONDecoder().decode(HTTPResponseBody.self, from: data)
             
-            let squad = try JSONDecoder().decode(Squad.self, from: responseData)
+            let squad = responseBody.json
             let response = Request.Response(statusCode: httpResponse.statusCode,
                                             headers: httpResponse.allHeaderFields as? [String: String] ?? [:],
                                             squad: squad,
