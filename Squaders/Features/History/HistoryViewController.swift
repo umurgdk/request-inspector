@@ -19,6 +19,7 @@ class HistoryViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         appState.$requests.sink { [weak self] requests in
             self?.dataSource.requests = requests
             self?.outlineView.reloadData()

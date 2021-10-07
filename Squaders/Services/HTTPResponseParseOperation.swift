@@ -13,14 +13,12 @@ class HTTPResponseParseOperation: Operation {
     
     let httpResponse: HTTPURLResponse
     let data: Data
-    
-    var completionQueue: OperationQueue
     let parseCompletionBlock: (Result) -> Void
-    init(response: HTTPURLResponse, data: Data, completionQueue: OperationQueue = .main, completion: @escaping (Result) -> Void) {
+    
+    init(response: HTTPURLResponse, data: Data, completion: @escaping (Result) -> Void) {
         self.httpResponse = response
         self.data = data
         self.parseCompletionBlock = completion
-        self.completionQueue = completionQueue
     }
     
     override func main() {
@@ -31,7 +29,7 @@ class HTTPResponseParseOperation: Operation {
                 let responseString = object["data"] as? String,
                 let responseData = responseString.data(using: .utf8)
             else {
-                complete(with: .failure(.unexpectedResponse(httpResponse, nil)))
+                parseCompletionBlock(.failure(.unexpectedResponse(httpResponse, nil)))
                 return
             }
             
@@ -41,15 +39,9 @@ class HTTPResponseParseOperation: Operation {
                                             squad: squad,
                                             inspectableTree: squad.inspectableTree)
             
-            complete(with: .success(response))
+            parseCompletionBlock(.success(response))
         } catch {
-            complete(with: .failure(.unexpectedResponse(httpResponse, error)))
-        }
-    }
-    
-    private func complete(with result: Result) {
-        completionQueue.addOperation {
-            self.parseCompletionBlock(result)
+            parseCompletionBlock(.failure(.unexpectedResponse(httpResponse, error)))
         }
     }
 }

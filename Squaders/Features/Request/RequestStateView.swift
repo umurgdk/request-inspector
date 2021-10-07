@@ -50,7 +50,10 @@ class RequestStateView: BaseView {
         $0.controlSize = .small
     }
     
-    private lazy var stateLabel = NSTextField(labelWithString: "")
+    private lazy var stateLabel = NSTextField(labelWithString: "").configure {
+        $0.font = .preferredFont(forTextStyle: .title2, options: [:])
+    }
+    
     private lazy var dateLabel = NSTextField(labelWithString: "").configure {
         $0.font = .preferredFont(forTextStyle: .subheadline, options: [:])
         $0.textColor = .secondaryLabelColor
@@ -63,13 +66,13 @@ class RequestStateView: BaseView {
     
     private lazy var statusCodeBox = NSView().configure {
         $0.wantsLayer = true
+        $0.layer?.cornerRadius = 6
+        $0.layer?.borderColor = CGColor(gray: 0, alpha: 0.1)
+        $0.layer?.borderWidth = 1
     }
     
     override var wantsUpdateLayer: Bool { true }
     override func setupViewHierarchy() {
-        wantsLayer = true
-        layerContentsRedrawPolicy = .onSetNeedsDisplay
-        
         addSubview(stateLabel)
         stateLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -86,14 +89,14 @@ class RequestStateView: BaseView {
         statusCodeLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            stateLabel.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+            stateLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stateLabel.topAnchor.constraint(equalTo: topAnchor),
             stateLabel.trailingAnchor.constraint(lessThanOrEqualTo: statusCodeBox.leadingAnchor, constant: -20),
             
             dateLabel.topAnchor.constraint(equalTo: stateLabel.bottomAnchor),
             dateLabel.leadingAnchor.constraint(equalTo: stateLabel.leadingAnchor),
             dateLabel.trailingAnchor.constraint(equalTo: stateLabel.trailingAnchor),
-            dateLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
+            dateLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             statusCodeBox.trailingAnchor.constraint(equalTo: trailingAnchor),
             statusCodeBox.topAnchor.constraint(equalTo: topAnchor),
@@ -106,15 +109,5 @@ class RequestStateView: BaseView {
             activityIndicator.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-    }
-    
-    override func updateLayer() {
-        super.updateLayer()
-        guard let layer = layer else { return }
-        
-        layer.borderColor = NSColor.separatorColor.cgColor
-        layer.borderWidth = 1
-        layer.cornerRadius = 8
-        layer.masksToBounds = true
     }
 }

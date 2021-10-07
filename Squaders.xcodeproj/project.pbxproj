@@ -17,7 +17,6 @@
 		A9EF1C5D270A5B54009EF6D8 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C5C270A5B54009EF6D8 /* Inspectable.swift */; };
 		A9EF1C60270A5C24009EF6D8 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C5F270A5C24009EF6D8 /* HTTPService.swift */; };
 		A9EF1C62270A6D19009EF6D8 /* HTTPResponseParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C61270A6D19009EF6D8 /* HTTPResponseParseOperation.swift */; };
-		A9EF1C64270A6E26009EF6D8 /* HTTPRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C63270A6E26009EF6D8 /* HTTPRequestOperation.swift */; };
 		A9EF1C66270B187E009EF6D8 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C65270B187E009EF6D8 /* AsyncOperation.swift */; };
 		A9EF1C68270B2560009EF6D8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C67270B2560009EF6D8 /* AppState.swift */; };
 		A9EF1C71270B2B4D009EF6D8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1C70270B2B4D009EF6D8 /* HistoryViewController.swift */; };
@@ -48,7 +47,6 @@
 		A9EF1C5C270A5B54009EF6D8 /* Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
 		A9EF1C5F270A5C24009EF6D8 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		A9EF1C61270A6D19009EF6D8 /* HTTPResponseParseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseParseOperation.swift; sourceTree = "<group>"; };
-		A9EF1C63270A6E26009EF6D8 /* HTTPRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestOperation.swift; sourceTree = "<group>"; };
 		A9EF1C65270B187E009EF6D8 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		A9EF1C67270B2560009EF6D8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A9EF1C70270B2B4D009EF6D8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				A9EF1C5F270A5C24009EF6D8 /* HTTPService.swift */,
-				A9EF1C63270A6E26009EF6D8 /* HTTPRequestOperation.swift */,
 				A9EF1C61270A6D19009EF6D8 /* HTTPResponseParseOperation.swift */,
 			);
 			path = Services;
@@ -252,7 +249,6 @@
 				A9EF1C79270B2FF3009EF6D8 /* ContentViewController.swift in Sources */,
 				A9EF1C8C270B5EC2009EF6D8 /* HistoryCellView.swift in Sources */,
 				A9EF1C75270B2C25009EF6D8 /* RequestViewController.swift in Sources */,
-				A9EF1C64270A6E26009EF6D8 /* HTTPRequestOperation.swift in Sources */,
 				A9EF1C58270A4E04009EF6D8 /* BaseViewController.swift in Sources */,
 				A9EF1C56270A4DAE009EF6D8 /* NSObject+configurable.swift in Sources */,
 				A9EF1C77270B2E3B009EF6D8 /* RequestViewModel.swift in Sources */,

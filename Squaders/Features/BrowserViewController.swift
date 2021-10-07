@@ -32,13 +32,17 @@ class BrowserViewController: BaseViewController {
     lazy var splitViewController = NSSplitViewController().configure {
         let sidebarItem = NSSplitViewItem(sidebarWithViewController: historyViewController)
         sidebarItem.minimumThickness = 200
+        sidebarItem.titlebarSeparatorStyle = .automatic
         $0.addSplitViewItem(sidebarItem)
         
         let contentItem = NSSplitViewItem(viewController: contentViewController)
+        contentItem.titlebarSeparatorStyle = .shadow
         $0.addSplitViewItem(contentItem)
     }
     
     override func setupViewHierarchy() {
+        view.wantsLayer = true
+        
         addChild(splitViewController)
         view.addSubview(splitViewController.view)
         
